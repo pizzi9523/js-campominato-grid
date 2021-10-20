@@ -11,3 +11,15 @@ const user_choice_difficult = parseInt(prompt("Inserisci un livello di difficolt
 //console.log(user_choice_difficult);
 
 
+const containerElement = document.querySelector(".container")
+
+function createGrid(cell_number) {
+    for (let i = 0; i < cell_number; i++) {
+        let gridElement = document.createElement("div");
+        gridElement.className = "grid_cell"
+        containerElement.append(gridElement)
+
+    }
+}
+
+createGrid(80)
