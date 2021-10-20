@@ -5,6 +5,8 @@ con difficoltà 2 => tra 1 e 81
 con difficoltà 3 => tra 1 e 49
 Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro.*/
 
+/*ELEMENTO DOM*/
+const containerElement = document.querySelector(".container")
 
 //L'utente indica un livello di difficoltà
 const user_choice_difficult = parseInt(prompt("Inserisci un livello di difficoltà compreso tra 1 e 3:"));
@@ -14,15 +16,18 @@ const user_choice_difficult = parseInt(prompt("Inserisci un livello di difficolt
 let cell_number;
 if (user_choice_difficult == 1) {
     cell_number = 100;
+    containerElement.style.width = "1000px"
 } else if (user_choice_difficult == 2) {
     cell_number = 81;
+    containerElement.style.width = "900px"
+
 } else if (user_choice_difficult == 3) {
     cell_number = 49;
+    containerElement.style.width = "700px"
 }
 
 //console.log(cell_number);
 
-const containerElement = document.querySelector(".container")
 
 //Creo la griglia cliccabile in base al valore passato
 function createGridClick(cell_number) {
