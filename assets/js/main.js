@@ -10,6 +10,16 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro.*/
 const user_choice_difficult = parseInt(prompt("Inserisci un livello di difficoltà compreso tra 1 e 3:"));
 //console.log(user_choice_difficult);
 
+let cell_number;
+if (user_choice_difficult == 1) {
+    cell_number = 100;
+} else if (user_choice_difficult == 2) {
+    cell_number = 81;
+} else if (user_choice_difficult == 3) {
+    cell_number = 49;
+}
+
+console.log(cell_number);
 
 const containerElement = document.querySelector(".container")
 
@@ -22,4 +32,4 @@ function createGrid(cell_number) {
     }
 }
 
-createGrid(80)
+createGrid(cell_number)
