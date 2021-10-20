@@ -22,3 +22,8 @@ body{
     text-align: center;
     line-height: 100px;
 }
+
+.clicked{
+    background-color: #99CBFF;
+    color: black;
+}

@@ -35,8 +35,13 @@ function createGridClick(cell_number) {
         gridElement.addEventListener("click", function () {
             //console.log(this);
 
-            this.style.backgroundColor = "#99CBFF"
-            this.style.color = "black"
+            if (this.classList.contains("clicked")) {
+                this.classList.remove("clicked")
+            } else {
+                this.classList.add("clicked")
+            }
+            //this.style.backgroundColor = "#99CBFF"
+            //this.style.color = "black"
         })
 
     }
