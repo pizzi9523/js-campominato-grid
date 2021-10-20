@@ -19,17 +19,24 @@ if (user_choice_difficult == 1) {
     cell_number = 49;
 }
 
-console.log(cell_number);
+//console.log(cell_number);
 
 const containerElement = document.querySelector(".container")
 
-function createGrid(cell_number) {
+function createGridClick(cell_number) {
     for (let i = 0; i < cell_number; i++) {
         let gridElement = document.createElement("div");
         gridElement.className = "grid_cell"
         containerElement.append(gridElement)
 
+        gridElement.addEventListener("click", function () {
+            //console.log(this);
+
+            this.style.backgroundColor = "#99CBFF"
+        })
+
     }
 }
 
-createGrid(cell_number)
+createGridClick(cell_number)
+
